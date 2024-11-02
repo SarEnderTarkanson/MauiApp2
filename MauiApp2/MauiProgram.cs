@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiApp2.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace MauiApp2
 {
@@ -18,7 +19,8 @@ namespace MauiApp2
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainViewModel>();
             return builder.Build();
         }
     }
