@@ -21,6 +21,9 @@ namespace MauiApp2
 #endif
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
+
+            builder.Services.AddTransient<DetailPage>();
+            builder.Services.AddTransient<DetailViewModel>();
             return builder.Build();
         }
     }
